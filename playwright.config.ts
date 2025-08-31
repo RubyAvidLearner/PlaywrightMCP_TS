@@ -7,13 +7,16 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [
-    ['html'],                                    // For local development - interactive UI
+    ['html'], // For local development - interactive UI
     ['junit', { outputFile: 'test-results.xml' }], // For CI/CD - machine readable
-    ['allure-playwright', { 
-      detail: true, 
-      outputFolder: 'allure-results',
-      suiteTitle: 'Playwright Test Suite'
-    }]
+    [
+      'allure-playwright',
+      {
+        detail: true,
+        outputFolder: 'allure-results',
+        suiteTitle: 'Playwright Test Suite',
+      },
+    ],
   ],
   use: {
     baseURL: 'http://localhost:3000',

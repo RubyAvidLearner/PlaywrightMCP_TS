@@ -2,7 +2,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:playwright/recommended',
   ],
   plugins: ['@typescript-eslint', 'playwright'],
@@ -19,4 +19,5 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'warn',
     'no-console': 'warn',
   },
+  ignorePatterns: ['**/*.spec.ts', '**/*.test.ts'],
 };
