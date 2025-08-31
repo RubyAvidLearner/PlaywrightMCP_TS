@@ -1,0 +1,28 @@
+{
+  "name": "playwright-typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:allure": "npx playwright test && npm run allure:generate",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run format:check"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "allure-playwright": "^3.3.3",
+    "eslint": "^8.0.0",
+    "eslint-plugin-playwright": "^0.18.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}

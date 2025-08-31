@@ -1,0 +1,29 @@
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Allure reports
+allure-results/
+allure-report/
+
+# JUnit reports
+test-results.xml
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
