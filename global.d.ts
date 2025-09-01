@@ -1,3 +1,4 @@
+/* eslint-disable */
 declare global {
   // Test environment variables
   var TEST_ENV: 'development' | 'staging' | 'production';
