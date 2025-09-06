@@ -26,6 +26,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@modelcontextprotocol/server-filesystem": "^2025.8.21",
     "dotenv": "^17.2.1",
     "mysql2": "^3.14.4"
   }

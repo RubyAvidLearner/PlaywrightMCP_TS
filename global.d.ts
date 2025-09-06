@@ -65,37 +65,12 @@ declare global {
     dashboardPage: any;
     apiClient: any;
   }
-}
 
-// Custom test fixtures types
-export interface TestFixtures {
-  authService: any;
-  userService: any;
-  apiService: any;
-  dataService: any;
-}
-
-// Common response types
-export interface ApiResponse<T = any> {
-  success: boolean;
-  data: T;
-  message?: string;
-  error?: string;
-}
-
-export interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-  createdAt: string;
-  updatedAt: string;
-}
-
-export interface AuthTokens {
-  accessToken: string;
-  refreshToken: string;
-  expiresIn: number;
+  interface User {
+    id: number;
+    name: string;
+    age: number;
+  }
 }
 
 export {};
