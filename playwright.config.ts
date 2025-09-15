@@ -24,6 +24,41 @@ export default defineConfig({
   },
 
   projects: [
+    // Flamingo website tests - Multiple browsers
+    {
+      name: 'flamingo-chrome',
+      testDir: './tests/flamingo',
+      use: { 
+        ...devices['Desktop Chrome'],
+        baseURL: process.env.BASE_URL || 'https://flamingo.stywin.com/'
+      },
+    },
+    {
+      name: 'flamingo-firefox',
+      testDir: './tests/flamingo',
+      use: { 
+        ...devices['Desktop Firefox'],
+        baseURL: process.env.BASE_URL || 'https://flamingo.stywin.com/'
+      },
+    },
+    {
+      name: 'flamingo-safari',
+      testDir: './tests/flamingo',
+      use: { 
+        ...devices['Desktop Safari'],
+        baseURL: process.env.BASE_URL || 'https://flamingo.stywin.com/'
+      },
+    },
+    // Mobile browsers
+    {
+      name: 'flamingo-mobile-chrome',
+      testDir: './tests/flamingo',
+      use: { 
+        ...devices['Pixel 5'],
+        baseURL: process.env.BASE_URL || 'https://flamingo.stywin.com/'
+      },
+    },
+    // Original projects
     {
       name: 'frontend-auth-service',
       testDir: './tests/frontend/auth-service',
